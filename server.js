@@ -12,7 +12,13 @@ await connectDB()
 
 // Intialize Middlewares
 app.use(express.json())
-app.use(cors())
+app.use(
+  cors({
+    origin: 'https://genivision-client.vercel.app', 
+    credentials: true,                              
+    optionsSuccessStatus: 200,                       
+  })
+);
 
 // API routes
 app.use('/api/user',userRouter)
