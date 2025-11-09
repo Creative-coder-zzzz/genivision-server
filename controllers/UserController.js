@@ -107,20 +107,20 @@ const paymentRazorpay = async (req, res) => {
         switch (planId) {
             case 'Basic':
                 plan = 'Basic'
-                credits = 5
+                credits = 100
                 amount = 50
                 break;
 
             case 'Advanced':
                 plan = 'Advanced'
-                credits = 10
+                credits = 200
                 amount = 100
                 break;
 
             case 'Business':
                 plan = 'Business'
-                credits = 100
-                amount = 1000
+                credits = 300
+                amount = 150
                 break;
 
             default:
